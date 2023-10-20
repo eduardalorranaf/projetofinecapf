@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block center%}
+<div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-6 mb-3">
+        <h1 class="text-center pt-4">Formulário para cadastro de stand para finecap 2023</h1>
+        <hr>
+        <form method="post" >
+            {% csrf_token %}
+            <div class = "mb-3"> 
+                <label for="cnpj" class="form-label">Localização do stand</label>   
+                {{ form.localizacao }} 
+            </div>
+            <div class = "mb-3"> 
+                <label for="nome" class="form-label">Valor do stand</label>   
+                {{ form.valor }} 
+            </div>
+    
+            <button type="submit" class="btn btn-primary">
+              <a href="{% url 'listar_s' %}" class="text-white">enviar</a>
+            </button>
+    
+        </form>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-5">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+{% endblock %}

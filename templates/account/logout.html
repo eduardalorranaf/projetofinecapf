@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block center %}
+<html>
+<head>
+    <title>Logout</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- 1 of 3 -->
+          </div>
+          <!-- <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+          </form> -->
+          <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            <div class="d-flex justify-content-center mb-4">
+              <p>{% trans 'Você tem certeza que deseja sair?' %}</p>
+            </div>
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+            <div class=" mb-4">
+              <button class="" type="submit">{% trans 'Sair' %}</button>
+            </div>
+          </form>
+          
+        <div class="col">
+          <!-- 3 of 3 -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- 1 of 3 -->
+        </div>
+        <div class="col-5">
+          <!-- 2 of 3 (wider) -->
+        </div>
+        <div class="col">
+          <!-- 3 of 3 -->
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

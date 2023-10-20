@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block center %}
+
+<div class="container text-center">
+    <div class="row">
+      
+      <div class="col text-center">
+        <ul class="list-group list-group-flush">
+          <br><br><br><br>       
+          <li class="list-group-item"><p><strong>Localização do stand </strong>{{stand.localizacao}}</p></li>
+          <li class="list-group-item"><p><strong>Valor do stand </strong>{{stand.valor}}</p></li>
+        </ul>
+        
+
+        <div class="pt-3">
+          <a href="{% url 'listar_s' %}" class="btn btn-secondary">Voltar</a>
+          <a href="{% url 'editar_s' stand.pk %}" class="btn btn-primary">Editar</a>
+          <a href="{% url 'apagar_s' stand.pk %}" class="btn btn-danger">Apagar</a>
+        </div>
+        <br><br><br><br><br><br><br><br>
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block center %}
+<h3 class="m-3 text-center">Excluir Stand</h3>
+
+<div class="m-3 text-center">
+
+    <form method="post">
+        <section class="form container-fluid p-5x ">
+            {% csrf_token %}
+                <p>apagar este stand?</p>
+                {{ form }}
+        </section>
+       
+        <button class="btn btn-danger " type="submit"> Confirmar</button>
+        
+            </div>
+
+
+
+    </form>
+{% endblock %}

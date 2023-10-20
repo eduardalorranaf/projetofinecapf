@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block center %}
+
+<div class="container pt-4">
+    <div class="row">
+      <div class="col">
+        <!-- 1 of 3 -->
+      </div>
+      <div class="col-6 mb-3">
+        <div>
+            <h1>Olá!</h1>
+            <h5>Você deseja adicionar uma nova reserva? Clique aqui!</h5>
+            <a href="{% url 'cadastrar' %}" class="btn btn-primary mb-3">Cadastrar Reserva</a>
+        </div>
+        <div>
+            <h5>Você deseja adicionar um novo stand? Clique aqui!</h5>
+            <a href="{% url 'cadastrar_s' %}" class="btn btn-primary mb-3">Cadastrar Stand</a>
+        </div>
+    </div>
+    <div class="col">
+      <!-- 3 of 3 -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <!-- 1 of 3 -->
+    </div>
+    <div class="col-5">
+      <!-- 2 of 3 (wider) -->
+    </div>
+    <div class="col">
+      <!-- 3 of 3 -->
+    </div>
+  </div>
+</div>
+    
+{% endblock %}
+     
